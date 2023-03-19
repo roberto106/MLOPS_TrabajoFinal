@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Phone Rank Price</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+<h1>Predict Phone Price Rank</h1>
+
+<div class="body">
+ <div class="login">
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="battery_power" placeholder="Battery Power" required="required" /><br>
+    	<input type="text" name="blue" placeholder="Bluetooth" required="required" /><br>
+    	<input type="text" name="dual_sim" placeholder="Dual Sim" required="required" /><br>
+        <input type="text" name="clock_speed" placeholder="Clock Speed" required="required" /><br>
+        <input type="text" name="fc" placeholder="Front Camera MP" required="required" /><br>
+        <input type="text" name="four_g" placeholder="4G" required="required" /><br>
+        <input type="text" name="int_memory" placeholder="Internal Memory GB" required="required" /><br>
+        <input type="text" name="m_dep" placeholder="Mobile Depth" required="required" /><br>
+        <input type="text" name="mobile_wt" placeholder="Weight" required="required" /><br>
+        <input type="text" name="n_cores" placeholder="N° Cores" required="required" /><br>
+        <input type="text" name="pc" placeholder="Primary Camera MP" required="required" /><br>
+        <input type="text" name="px_height" placeholder="Pixel resolution H" required="required" /><br>
+        <input type="text" name="px_width" placeholder="Pixel resolution W" required="required" /><br>
+        <input type="text" name="ram" placeholder="RAM MB" required="required" /><br>
+        <input type="text" name="sc_h" placeholder="Screen Height" required="required" /><br>
+        <input type="text" name="sc_w" placeholder="Screen Width" required="required" /><br>
+        <input type="text" name="talk_time" placeholder="Talk Time" required="required" /><br>
+        <input type="text" name="three_g" placeholder="3G" required="required" /><br>
+        <input type="text" name="touch_screen" placeholder="Touch Screen" required="required" /><br>
+        <input type="text" name="wifi" placeholder="Wi Fi" required="required" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+  
+   
+ </div>
+</div>
+
+ {{pred}}
+
+</html>
+
+  
